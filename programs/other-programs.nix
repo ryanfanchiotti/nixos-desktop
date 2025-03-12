@@ -15,6 +15,7 @@
     fastfetch
     htop-vim
     git
+    gh
     unzip
     openssl
     pkg-config
