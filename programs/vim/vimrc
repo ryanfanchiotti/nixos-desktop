@@ -1,0 +1,45 @@
+" turn auto indentation on
+set autoindent
+
+" configure tabs
+set tabstop=4
+set shiftwidth=4 smarttab
+set expandtab
+
+" need to have tabs in make
+autocmd FileType make set noexpandtab
+
+" 2 spaces for nix
+autocmd FileType nix set tabstop=2 shiftwidth=2
+
+" turn syntax highlighting on
+syntax on
+
+" allow backspacing in insert mode
+set backspace=indent,eol,start
+
+" show both relative numbers and current line on left of screen
+set number relativenumber
+
+" always show ruler and status line at bottom of screen
+set ruler
+set rulerformat=%=[%l/%L]
+set laststatus=2
+
+" theme + changes
+colorscheme shine
+hi! Conditional cterm=bold ctermfg=3
+hi! Type cterm=bold ctermfg=2
+hi! PreProc cterm=bold ctermfg=5
+hi! Constant ctermfg=6
+hi! Statement cterm=bold ctermfg=3
+hi! Identifier ctermfg=2
+hi! ModeMsg cterm=italic,bold ctermbg=5 ctermfg=7
+hi! LineNr ctermfg=8
+hi! Normal ctermfg=0
+hi! StatusLine ctermbg=2
+hi! SpecialChar ctermfg=3
+hi! link Number Constant
+hi! String ctermfg=4
+hi! MatchParen ctermbg=3 ctermfg=1
+
