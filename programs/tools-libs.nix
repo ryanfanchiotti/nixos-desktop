@@ -15,6 +15,7 @@
     git
     gh
     unzip
+    nil
     openssl
     pkg-config
     ripgrep

@@ -1,8 +1,7 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-
-  # Enable dconf (System Management Tool)
+  # Enable dconf (System management tool)
   programs.dconf.enable = true;
 
   # Add user to libvirtd group
