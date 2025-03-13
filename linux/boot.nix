@@ -1,8 +1,12 @@
 {
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    # Bootloader settings
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
 
-  # Enable systemd in initial RAM disk
-  boot.initrd.systemd.enable = true;
+    # Enable systemd in initial RAM disk
+    initrd.systemd.enable = true;
+  };
 }
