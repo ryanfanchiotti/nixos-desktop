@@ -1,17 +1,15 @@
 { pkgs, ... }:
 
 {
-  # Programs simply installed as packages, configuration done manually
+  # Command line tools and libraries for this system
   environment.systemPackages = with pkgs; [
     wget
     file
     wineWowPackages.stable
     winetricks
-    pkgs.qemu
+    qemu
     quickemu
     clang-tools
-    vesktop
-    spotify
     fastfetch
     htop-vim
     git
@@ -21,7 +19,4 @@
     pkg-config
     ripgrep
   ];
-  
-  # Enable firefox
-  programs.firefox.enable = true;
 }

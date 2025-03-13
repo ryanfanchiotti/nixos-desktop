@@ -1,7 +1,8 @@
 {
   imports = [ 
     ./vim/vim.nix 
-    ./virt-manager/virt-manager.nix
-    ./other-programs.nix
+    ./virt-manager.nix
+    ./gui-progs.nix
+    ./tools-libs.nix
   ];
 }
