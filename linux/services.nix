@@ -31,7 +31,7 @@
       nssmdns4 = true;
     };
 
-    # Enable sound with pipewire
+    # Enable sound with PipeWire 
     pulseaudio.enable = false;
     pipewire = {
       enable = true;
