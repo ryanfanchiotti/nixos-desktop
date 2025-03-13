@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  # User latest kernel version
+  # Use latest kernel version
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   system = {
