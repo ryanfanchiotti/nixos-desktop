@@ -18,7 +18,6 @@
     openssl
     pkg-config
     ripgrep
-    btop
     tree
   ];
 }
