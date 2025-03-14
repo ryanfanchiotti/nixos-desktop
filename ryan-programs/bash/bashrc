@@ -69,3 +69,14 @@ count-processes() {
     done < <(ps aux)
     echo $count
 }
+
+# commit all changes in current repo, copy latest hash to clipboard
+gitall() {
+    git add -A || return
+    git commit -m "$*" || return
+    git push || return
+    echo "Latest git hash:"
+    git rev-parse HEAD
+    git rev-parse HEAD | pbcopy
+    echo "Hash copied to clipboard."
+}
