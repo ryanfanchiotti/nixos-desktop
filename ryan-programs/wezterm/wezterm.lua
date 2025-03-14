@@ -59,5 +59,18 @@ config.colors = {
   },
 }
 
+function basename(s)
+  return string.gsub(s, '(.*[/\\])(.*)', '%2')
+end
+
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+  local pane = tab.active_pane
+  local pane_title = basename(pane.foreground_process_name)
+  local idx = tostring(tab.tab_index + 1)
+  return {
+    {Text=idx .. ": " .. ((pane_title and pane_title ~= "") and pane_title or "unset")},
+  }
+end)
+
 return config
 
