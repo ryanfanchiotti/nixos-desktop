@@ -1,0 +1,71 @@
+# use vi mode instead of emacs
+set -o vi
+
+# aliases
+alias l="ls -alhF"
+alias la="ls -a"
+
+alias sctl="systemctl"
+
+# nix aliases
+alias switch="sudo nixos-rebuild --flake .#nixos-desktop switch"
+alias n="nix-shell -p"
+
+# set up binghamton vpn
+bu-vpn() {
+    local usage="Usage: ${FUNCNAME[0]} [delete | create | start | stop]"
+    if [[ -z $1 ]]; then
+        echo "$usage" 1>&2
+        return 1
+    elif [[ "$1" == "delete" ]]; then
+        nmcli connection delete BingVPN
+    elif [[ "$1" == "create" ]]; then
+        nmcli connection show BingVPN >/dev/null 2>&1 && {
+            echo "Binghamton VPN connection has already been created." 1>&2
+            return 1
+        }
+        nmcli connection add con-name BingVPN autoconnect FALSE type vpn vpn-type org.freedesktop.NetworkManager.openconnect vpn.data "
+		protocol = pulse,
+		authtype = password,
+		gateway = ssl.binghamton.edu,
+		gateway-flags = 2,
+		gwcert-flags = 2,
+		cookie-flags = 2"
+    elif [[ "$1" == "start" ]]; then
+        nmcli connection up --ask BingVPN
+    elif [[ "$1" == "stop" ]]; then
+        nmcli connection down BingVPN
+    else
+        echo "$usage" 1>&2
+        return 1
+    fi  
+}
+
+# ssh to binghamton remotes, param is number of machine to connect to
+sshbu() {
+    [[ ${1} =~ ^[0-9]*$ ]] || {
+        echo "Usage: ${FUNCNAME[0]} <RemoteID: Unsigned | None>"
+        return 1
+    }
+    local machine_num=""
+    [[ $# -ge 1 ]] && machine_num="$(printf "%02d" "${1}")"
+    ssh "rfanchi1@remote${machine_num}.cs.binghamton.edu"
+}
+
+# print number of threads running
+count-threads() {
+    count=0
+    for num in $(ps -eo nlwp); do
+        ((count += num))
+    done
+    echo $count
+}
+
+# print number of processes running
+count-processes() {
+    count=0
+    while read line; do
+        ((count++))
+    done < <(ps aux)
+    echo $count
+}
