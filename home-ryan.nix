@@ -1,12 +1,8 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
     ./ryan-programs
-  ];
-  # User only packages
-  home.packages = with pkgs; [
-    cowsay
   ];
 
   # Username and home
