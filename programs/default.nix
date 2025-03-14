@@ -2,7 +2,7 @@
   imports = [ 
     ./vim
     ./virt-manager.nix
-    ./gui-progs.nix
+    ./gui-programs.nix
     ./tools-libs.nix
   ];
 }
