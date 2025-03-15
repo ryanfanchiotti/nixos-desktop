@@ -52,24 +52,6 @@ sshbu() {
     ssh "rfanchi1@remote${machine_num}.cs.binghamton.edu"
 }
 
-# print number of threads running
-count-threads() {
-    count=0
-    for num in $(ps -eo nlwp); do
-        ((count += num))
-    done
-    echo $count
-}
-
-# print number of processes running
-count-processes() {
-    count=0
-    while read line; do
-        ((count++))
-    done < <(ps aux)
-    echo $count
-}
-
 # commit all changes in current repo, copy latest hash to clipboard
 gitall() {
     git add -A || return
