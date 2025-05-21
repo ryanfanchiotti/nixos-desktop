@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     spotify
     vesktop
+    zoom-us
   ];
   programs.firefox.enable = true;
 }

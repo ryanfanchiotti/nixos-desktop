@@ -19,5 +19,6 @@
     pkg-config
     ripgrep
     tree
+    haskell-language-server
   ];
 }
