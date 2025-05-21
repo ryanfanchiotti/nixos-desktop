@@ -20,5 +20,6 @@
     ripgrep
     tree
     haskell-language-server
+    ghc
   ];
 }
