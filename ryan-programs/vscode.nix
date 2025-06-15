@@ -49,11 +49,12 @@
         inlayHints.enabled = "off";
         wordWrap = "on";
         fontSize = 17;
-        fontFamily = "Iosevka";
+        fontFamily = "Comic Mono";
         cursorStyle = "line";
         folding = false;
         stickyScroll.enabled = false;
         renderLineHighlight = "none";
+        minimap.enabled = false;
       };
 
       explorer = {
@@ -74,6 +75,8 @@
 
       window.restoreWindows = "none";
       window.title = "\${activeFolderShort}";
+
+      update.mode = "none";
     };
 
     # See https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization

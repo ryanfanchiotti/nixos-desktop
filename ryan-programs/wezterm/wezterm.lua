@@ -4,7 +4,7 @@ local mux = wezterm.mux
 local config = {}
 
 config.font = wezterm.font { 
-  family = 'Iosevka',
+  family = 'Comic Mono',
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
 config.font_size = 14
@@ -13,7 +13,7 @@ config.color_scheme = 'Ayu Light (Gogh)'
 
 config.window_frame = {
   font = wezterm.font { 
-    family = 'Iosevka',
+    family = 'Comic Mono',
     weight = 'Bold',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
   },

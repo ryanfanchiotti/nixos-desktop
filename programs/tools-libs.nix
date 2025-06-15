@@ -21,5 +21,6 @@
     tree
     haskell-language-server
     ghc
+    cabal-install
   ];
 }
