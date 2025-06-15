@@ -24,8 +24,8 @@ config.window_frame = {
 
 config.window_close_confirmation = 'NeverPrompt'
 
-config.initial_rows = 37
-config.initial_cols = 185
+config.initial_rows = 42
+config.initial_cols = 183
 
 config.colors = {
   cursor_fg = '#000000',
