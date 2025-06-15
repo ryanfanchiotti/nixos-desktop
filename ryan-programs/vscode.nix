@@ -30,7 +30,7 @@
       terminal.integrated = {
         fontSize = 17;
         cursorBlinking = false;
-        minimumContrastRatio = false;
+        minimumContrastRatio = true;
         shellIntegration = {
           history = 0;
           enabled = false;
