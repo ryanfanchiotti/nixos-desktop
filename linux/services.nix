@@ -1,5 +1,19 @@
 { pkgs, ... }:
 
+let
+  # Using Owl-Maintain fork, which addresses issues printing large graphicals documents.
+  #   - https://github.com/pdewacht/brlaser/issues/40
+  #   - https://github.com/pdewacht/brlaser/issues/52
+  #   - https://github.com/pdewacht/brlaser/issues/95
+  brlaser-master = pkgs.brlaser.overrideAttrs (finalAttrs: previousAttrs: {
+    src = pkgs.fetchFromGitHub {
+      owner = "Owl-Maintain";
+      repo = "brlaser";
+      rev = "bfaf936bf46f7d3a8a993352fbbb9615b4fc532a";
+      sha256 = "d5pS75Z7iUaw8qo4U6tqsZR7IJa/PJzJUApz/27elaM=";
+    };
+  });
+in
 {
   # RealtimeKit system service, used by PulseAudio and PipeWire
   security.rtkit.enable = true;
@@ -13,7 +27,7 @@
       enable = true;
       wayland.enable = true;
     };
-    
+
     # Configure keymap in X11
     xserver.xkb = {
       layout = "us";
@@ -23,15 +37,20 @@
     # Enable CUPS to print documents
     printing = {
       enable = true;
-      drivers = [ pkgs.gutenprint pkgs.brlaser ];
+      drivers =  [
+        pkgs.gutenprint
+        pkgs.gutenprintBin
+        brlaser-master
+      ];
     };
     # This avahi config can be necessary to connect to network print servers
     avahi = {
       enable = true;
       nssmdns4 = true;
+      openFirewall = true;
     };
 
-    # Enable sound with PipeWire 
+    # Enable sound with PipeWire
     pulseaudio.enable = false;
     pipewire = {
       enable = true;

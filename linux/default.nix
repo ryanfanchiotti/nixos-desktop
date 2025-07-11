@@ -5,4 +5,3 @@
     ./system-setup.nix
   ];
 }
-    

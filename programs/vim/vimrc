@@ -43,3 +43,6 @@ hi! link Number Constant
 hi! String ctermfg=4
 hi! MatchParen ctermbg=3 ctermfg=1
 
+" highlight extra whitespace
+match ErrorMsg /\s\+$/
+
