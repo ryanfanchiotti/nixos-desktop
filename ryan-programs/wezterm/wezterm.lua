@@ -3,28 +3,28 @@ local mux = wezterm.mux
 
 local config = {}
 
-config.font = wezterm.font { 
-  family = 'Comic Mono',
+config.font = wezterm.font {
+  family = 'mno16',
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
-config.font_size = 14
+config.font_size = 13
 
 config.color_scheme = 'Ayu Light (Gogh)'
 
 config.window_frame = {
-  font = wezterm.font { 
-    family = 'Comic Mono',
+  font = wezterm.font {
+    family = 'mno16',
     weight = 'Bold',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
   },
-  font_size = 13,
+  font_size = 12,
   active_titlebar_bg = '#f3f3f3',
   inactive_titlebar_bg = '#f3f3f3',
 }
 
 config.window_close_confirmation = 'NeverPrompt'
 
-config.initial_rows = 42
+config.initial_rows = 40
 config.initial_cols = 183
 
 config.colors = {
