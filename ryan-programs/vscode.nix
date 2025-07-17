@@ -28,7 +28,7 @@
       git.openRepositoryInParentFolders = "never";
 
       terminal.integrated = {
-        fontSize = 17;
+        fontSize = 16;
         cursorBlinking = false;
         minimumContrastRatio = true;
         shellIntegration = {
@@ -48,8 +48,8 @@
         hover.delay = 50;
         inlayHints.enabled = "off";
         wordWrap = "on";
-        fontSize = 17;
-        fontFamily = "Comic Mono";
+        fontSize = 16;
+        fontFamily = "Hermit";
         cursorStyle = "line";
         folding = false;
         stickyScroll.enabled = false;
@@ -89,7 +89,7 @@
     ];
 
     profiles.default.extensions = with pkgs.vscode-marketplace; [
-      
+
     ];
   };
 }
