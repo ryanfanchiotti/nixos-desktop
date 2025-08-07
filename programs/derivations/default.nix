@@ -1,6 +1,5 @@
 {
   imports = [
-    ./z3-noodler
-    ./ostrich
+    # ./z3-noodler
   ];
 }

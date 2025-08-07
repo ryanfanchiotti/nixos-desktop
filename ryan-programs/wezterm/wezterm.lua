@@ -24,10 +24,13 @@ config.window_frame = {
 
 config.window_close_confirmation = 'NeverPrompt'
 
+config.enable_scroll_bar = true
+
 config.initial_rows = 40
 config.initial_cols = 182
 
 config.colors = {
+  scrollbar_thumb = '#ebcf60',
   cursor_fg = '#000000',
   cursor_bg = '#becee3',
   cursor_border = '#becee3',

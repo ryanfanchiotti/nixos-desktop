@@ -6,7 +6,7 @@
     spotify
     vesktop
     zoom-us
-    citrix_workspace
+    networkmanagerapplet
   ];
   programs.firefox.enable = true;
 }
