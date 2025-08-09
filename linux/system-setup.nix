@@ -29,7 +29,7 @@
 
   networking = {
     # Define hostname
-    hostName = "desktop-nixos";
+    hostName = "piplup";
 
     # Enable networking through network manager
     networkmanager.enable = true;
