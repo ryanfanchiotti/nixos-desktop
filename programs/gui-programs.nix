@@ -7,6 +7,7 @@
     vesktop
     zoom-us
     networkmanagerapplet
+    slack
   ];
   programs.firefox.enable = true;
 }
