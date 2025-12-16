@@ -6,40 +6,11 @@ alias l="ls -alhF"
 alias la="ls -a"
 
 alias sctl="systemctl"
+alias bingvpn="sudo openconnect buvpn.binghamton.edu --user rfanchi1"
 
 # nix aliases
 alias switch="sudo nixos-rebuild --flake .#nixos-desktop switch"
 alias n="nix-shell -p"
-
-# set up binghamton vpn
-bu-vpn() {
-    local usage="Usage: ${FUNCNAME[0]} [delete | create | start | stop]"
-    if [[ -z $1 ]]; then
-        echo "$usage" 1>&2
-        return 1
-    elif [[ "$1" == "delete" ]]; then
-        nmcli connection delete BingVPN
-    elif [[ "$1" == "create" ]]; then
-        nmcli connection show BingVPN >/dev/null 2>&1 && {
-            echo "Binghamton VPN connection has already been created." 1>&2
-            return 1
-        }
-        nmcli connection add con-name BingVPN autoconnect FALSE type vpn vpn-type org.freedesktop.NetworkManager.openconnect vpn.data "
-		protocol = pulse,
-		authtype = password,
-		gateway = ssl.binghamton.edu,
-		gateway-flags = 2,
-		gwcert-flags = 2,
-		cookie-flags = 2"
-    elif [[ "$1" == "start" ]]; then
-        nmcli connection up --ask BingVPN
-    elif [[ "$1" == "stop" ]]; then
-        nmcli connection down BingVPN
-    else
-        echo "$usage" 1>&2
-        return 1
-    fi  
-}
 
 # ssh to binghamton remotes, param is number of machine to connect to
 sshbu() {
