@@ -4,7 +4,7 @@ local mux = wezterm.mux
 local config = {}
 
 config.font = wezterm.font {
-  family = 'mno16',
+  family = 'Monaspace Xenon',
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
 config.font_size = 13
@@ -13,7 +13,7 @@ config.color_scheme = 'Ayu Light (Gogh)'
 
 config.window_frame = {
   font = wezterm.font {
-    family = 'mno16',
+    family = 'Monaspace Xenon',
     weight = 'Bold',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
   },
@@ -27,7 +27,7 @@ config.window_close_confirmation = 'NeverPrompt'
 config.enable_scroll_bar = true
 
 config.initial_rows = 40
-config.initial_cols = 182
+config.initial_cols = 170
 
 config.colors = {
   scrollbar_thumb = '#ebcf60',
