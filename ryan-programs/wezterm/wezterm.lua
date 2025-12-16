@@ -30,7 +30,7 @@ config.initial_rows = 40
 config.initial_cols = 170
 
 config.colors = {
-  scrollbar_thumb = '#ebcf60',
+  scrollbar_thumb = '#cdab8f',
   cursor_fg = '#000000',
   cursor_bg = '#becee3',
   cursor_border = '#becee3',
