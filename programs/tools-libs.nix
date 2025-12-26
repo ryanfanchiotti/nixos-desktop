@@ -28,5 +28,6 @@
     ghc
     cabal-install
     openconnect
+    wl-clipboard
   ];
 }
