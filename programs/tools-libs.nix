@@ -29,5 +29,6 @@
     cabal-install
     openconnect
     wl-clipboard
+    quota
   ];
 }
