@@ -8,6 +8,7 @@
     zoom-us
     networkmanagerapplet
     slack
+    bluejay
   ];
   programs.firefox.enable = true;
 }

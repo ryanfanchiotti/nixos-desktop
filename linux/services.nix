@@ -65,5 +65,14 @@ in
 
     # Enable flatpaks to be installed
     flatpak.enable = true;
+
+    # GUI for bluetooth
+    blueman.enable = true;
+  };
+
+  # Start bluetooth at boot
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
   };
 }
