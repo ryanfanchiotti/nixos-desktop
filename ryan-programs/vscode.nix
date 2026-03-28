@@ -48,8 +48,8 @@
         hover.delay = 50;
         inlayHints.enabled = "off";
         wordWrap = "on";
-        fontSize = 16;
-        fontFamily = "Monaspace Xenon";
+        fontSize = 15;
+        fontFamily = "Monaspace Krypton";
         cursorStyle = "line";
         folding = false;
         stickyScroll.enabled = false;
