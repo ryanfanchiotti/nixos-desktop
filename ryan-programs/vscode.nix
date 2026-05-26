@@ -49,7 +49,7 @@
         inlayHints.enabled = "off";
         wordWrap = "on";
         fontSize = 15;
-        fontFamily = "Monaspace Krypton";
+        fontFamily = "Comic Mono";
         cursorStyle = "line";
         folding = false;
         stickyScroll.enabled = false;

@@ -5,7 +5,7 @@
   environment.systemPackages = with pkgs; [
     wget
     file
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
     qemu
     quickemu

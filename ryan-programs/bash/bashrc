@@ -11,6 +11,11 @@ alias bingvpn="sudo openconnect buvpn.binghamton.edu --user rfanchi1"
 # nix aliases
 alias switch="sudo nixos-rebuild --flake .#nixos-desktop switch"
 alias n="nix-shell -p"
+alias fv='vim $(fzf)'
+
+s() {
+    rg --smart-case "$*"
+}
 
 # ssh to binghamton remotes, param is number of machine to connect to
 sshbu() {
