@@ -30,5 +30,6 @@
     openconnect
     wl-clipboard
     quota
+    cargo
   ];
 }
