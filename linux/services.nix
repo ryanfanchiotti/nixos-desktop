@@ -81,5 +81,12 @@ in
     open = false;
     modesetting.enable = true;
     powerManagement.enable = true;
+    nvidiaSettings = true;
+    prime = {
+      sync.enable = true;
+      # Taken from lshw output
+      nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:7:0:0";
+    };
   };
 }
