@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   # Using Owl-Maintain fork, which addresses issues printing large graphicals documents.
@@ -36,6 +36,7 @@ in
       layout = "us";
       variant = "";
     };
+    xserver.videoDrivers = [ "nvidia" ];
 
     # Enable CUPS to print documents
     printing = {
@@ -74,5 +75,11 @@ in
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+  };
+  hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    open = false;
+    modesetting.enable = true;
+    powerManagement.enable = true;
   };
 }
