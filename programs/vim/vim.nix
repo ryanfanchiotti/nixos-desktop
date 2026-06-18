@@ -11,7 +11,8 @@
         start = [
           vim-nix
           vim-lastplace
-          vim-commentary
+          vim-strip-trailing-whitespace
+          vim-smt2
         ];
         opt = [];
       };

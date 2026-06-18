@@ -46,3 +46,5 @@ hi! MatchParen ctermbg=3 ctermfg=1
 " highlight extra whitespace
 match ErrorMsg /\s\+$/
 
+" comment plugin
+packadd comment
