@@ -9,6 +9,7 @@
     networkmanagerapplet
     slack
     bluejay
+    chromium
   ];
   programs.firefox.enable = true;
 }

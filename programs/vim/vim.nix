@@ -13,6 +13,7 @@
           vim-lastplace
           vim-strip-trailing-whitespace
           vim-smt2
+          Coqtail
         ];
         opt = [];
       };
