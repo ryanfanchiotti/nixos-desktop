@@ -14,6 +14,7 @@
           vim-strip-trailing-whitespace
           vim-smt2
           Coqtail
+          fzf-vim
         ];
         opt = [];
       };
