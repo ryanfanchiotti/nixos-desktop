@@ -3,7 +3,9 @@
 {
   # Install fonts
   fonts.packages = with pkgs; [
-    iosevka
+    # this bundles fucking node js???
+    # iosevka
+    iosevka-bin
     comic-mono
     paratype-pt-mono
     mno16

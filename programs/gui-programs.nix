@@ -6,9 +6,7 @@
     spotify
     vesktop
     zoom-us
-    networkmanagerapplet
     slack
-    bluejay
     chromium
   ];
   programs.firefox.enable = true;
