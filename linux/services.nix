@@ -61,7 +61,6 @@ in
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      jack.enable = true;
     };
 
     # Enable flatpaks to be installed
@@ -70,6 +69,10 @@ in
     # GUI for bluetooth
     blueman.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    pipewire.jack
+  ];
 
   # Start bluetooth at boot
   hardware.bluetooth = {
