@@ -14,7 +14,7 @@
       search.followSymlinks = false;
 
       extensions.ignoreRecommendations = true;
-      extensions.autoUpdate = false;
+      extensions.autoUpdate = "off";
 
       telemetry.telemetryLevel = "off";
 
